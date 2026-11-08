@@ -117,7 +117,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
 .mp-list+.mp-list{margin-top:20px}
 .mp-list[hidden]{display:none}
 .mp-list li{display:flex}
-.mp-card{display:flex;flex-direction:column;gap:10px;width:100%;padding:22px;border-radius:18px;background:#fff;border:1px solid var(--line);text-decoration:none;transition:transform .2s,box-shadow .2s}
+.mp-card{--px:22px;--py:22px;display:flex;flex-direction:column;gap:10px;width:100%;padding:var(--py) var(--px);overflow:hidden;border-radius:18px;background:#fff;border:1px solid var(--line);text-decoration:none;transition:transform .2s,box-shadow .2s}
 .mp-card:hover{transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(11,16,32,.45)}
 .mp-card:focus-visible{outline:3px solid #5B7CFA;outline-offset:2px}
 .mp-k{font-size:12px;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}
@@ -130,7 +130,10 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
 .mp-btn:hover{background:var(--ink);color:#fff}
 .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px}
 .duo+.duo{margin-top:20px}
-.post-card{display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding:36px;border-radius:26px;background:#fff;border:1px solid var(--line);text-decoration:none}
+.post-card{--px:36px;--py:36px;display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding:var(--py) var(--px);overflow:hidden;border-radius:26px;background:#fff;border:1px solid var(--line);text-decoration:none}
+.mp-thumb,.post-thumb{display:block;max-width:none;width:calc(100% + var(--px) * 2);height:auto;aspect-ratio:16/10;object-fit:cover;margin:calc(var(--py) * -1) calc(var(--px) * -1) 0;background:var(--bg)}
+.mp-thumb{margin-bottom:2px}
+.post-thumb{margin-bottom:-8px}
 .post-card-in{display:flex;flex-direction:column;gap:16px}
 .post-t{font-size:28px;line-height:1.2;font-weight:700;color:var(--ink)}
 .post-d{font-size:16px;line-height:1.6;color:var(--mut)}
@@ -163,6 +166,18 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
 .page-post table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;line-height:1.45;background:#fff;border:1px solid var(--line)}
 .page-post th,.page-post td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .page-post th{background:var(--ink);color:#fff;font-weight:600}
+.page-post .feat,.page-post figure{max-width:860px;margin:0 0 1.6em}
+.page-post figure{margin:1.6em 0}
+.page-post .feat img,.page-post figure img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff}
+.page-post figcaption{margin-top:10px;font-size:14px;line-height:1.5;color:var(--mut)}
+.page-post .toc{max-width:860px;margin:0 0 1.8em;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:16px;line-height:1.5}
+.page-post .toc summary{cursor:pointer;padding:14px 18px;font-family:'Space Grotesk',Inter,system-ui,sans-serif;font-weight:700;font-size:18px;list-style-position:inside}
+.page-post .toc ol{margin:0;padding:0 18px 14px 44px}
+.page-post .toc ol ol{padding:2px 0 0 18px;font-size:15px}
+.page-post .toc li{margin:.3em 0}
+.page-post .toc a{text-decoration:none}
+.page-post .toc a:hover{text-decoration:underline;text-decoration-color:#8FBF2E}
+.page-post h2[id],.page-post h3[id]{scroll-margin-top:16px}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.need,.series,.btn,.mp-card{transition:none}.card:hover,.mp-card:hover{transform:none}}
 
@@ -197,10 +212,10 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
   .sec-head{margin-bottom:24px}
   .h2{font-size:30px}
   .cta-box{padding:32px 24px}
-  .post-card{padding:28px 22px}
+  .post-card{--px:22px;--py:28px}
   .post-t{font-size:24px}
   .mp-h{font-size:23px}
-  .mp-card{padding:20px 18px}
+  .mp-card{--px:18px;--py:20px}
   .hide-sm{display:none}
   .page-post main{padding:36px 16px 56px;font-size:17px}
   .page-post h1{font-size:30px}

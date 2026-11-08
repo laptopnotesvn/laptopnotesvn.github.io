@@ -10,6 +10,7 @@ import json
 import re
 import sys
 import time
+import unicodedata
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -71,13 +72,59 @@ LEGACY_CARD_DESC = {
 }
 _DATE_RE = re.compile(r"Đăng ngày (\d{2})/(\d{2})/(\d{4})")
 
+# ---------------------------------------------------------------- ảnh + mục lục trong bài
+# tools/images.json do make_images.py sinh; thiếu thì bỏ qua lặng lẽ (bài vẫn có mục lục).
+IMAGES_JSON = TOOLS / "images.json"
+IMAGES = {}
+_BLOCK_RES = (
+    re.compile(r"\n?<!--feat-->.*?<!--/feat-->", re.S),
+    re.compile(r"<!--toc-->.*?<!--/toc-->\n?", re.S),
+    re.compile(r"\n?<!--fig-->.*?<!--/fig-->", re.S),
+)
+_HID_RE = re.compile(r"<(h[23]) id=\"[^\"]*\">")
+_HEAD_RE = re.compile(r"<(h[23])>(.*?)</\1>", re.S)
+
+def load_images():
+    global IMAGES
+    IMAGES = load_json(IMAGES_JSON, {}) or {}
+
+def strip_enhance(s):
+    """Gỡ khối ảnh/mục lục và id tiêu đề do build.py chèn, để mỗi lần dựng bắt đầu từ bản sạch (chạy lại không đổi byte)."""
+    for r in _BLOCK_RES:
+        s = r.sub("", s)
+    return _HID_RE.sub(lambda m: "<%s>" % m.group(1), s)
+
+def slugify_vi(t):
+    t = t.replace("đ", "d").replace("Đ", "D")
+    t = unicodedata.normalize("NFD", t)
+    t = "".join(c for c in t if unicodedata.category(c) != "Mn").lower()
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-") or "muc"
+
+def feat_of(slug):
+    """Mục featured trong images.json nếu file ảnh có thật, không thì None."""
+    f = (IMAGES.get(slug) or {}).get("featured")
+    if f and (POSTS_DIR / slug / f["file"]).is_file():
+        return f
+    return None
+
+def feat_abs_url(slug):
+    f = feat_of(slug)
+    return (f"{SITE_URL}bai-viet/{slug}/{f['file']}", f["w"], f["h"]) if f else (None, None, None)
+
+def thumb_img(slug, cls):
+    f = feat_of(slug)
+    if not f:
+        return ""
+    return (f'<img class="{cls}" src="bai-viet/{slug}/{f["file"]}" width="{f["w"]}" height="{f["h"]}" '
+            f'alt="" loading="lazy" decoding="async">')
+
 def scan_posts():
     """Trả danh sách bài, mới nhất trước (cùng ngày thì theo slug). Mỗi bài: dict slug/path/title/desc/iso/src."""
     posts = []
     if not POSTS_DIR.is_dir():
         return posts
     for f in sorted(POSTS_DIR.glob("*/index.html")):
-        src = f.read_text(encoding="utf-8")
+        src = strip_enhance(f.read_text(encoding="utf-8"))
         m = re.search(r"<title>(.*?)</title>", src, re.S)
         title = html.unescape(m.group(1)).strip() if m else f.parent.name
         m = re.search(r'<meta name="description" content="([^"]*)"', src)
@@ -95,8 +142,10 @@ def scan_posts():
 
 def post_card(p, kicker):
     href = f'bai-viet/{p["slug"]}/'
+    thumb = thumb_img(p["slug"], "post-thumb")
+    thumb = thumb + "\n" if thumb else ""
     return f'''<a class="post-card" href="{href}">
-<div class="post-card-in">
+{thumb}<div class="post-card-in">
 <h2 class="mono kicker">{kicker}</h2>
 <span class="hd post-t">{esc(p["title"])}</span>
 <span class="post-d">{esc(p["desc"])}</span>
@@ -316,11 +365,12 @@ def model_card(q, p):
     meta = "%s · %d cấu hình" % (brand, n) if n else brand
     return (
         '<li><a class="mp-card" href="bai-viet/%s/">'
+        '%s'
         '<span class="mono mp-k">%s</span>'
         '<span class="hd mp-t">%s</span>'
         '<span class="mp-d">%s</span>'
         '<span class="mp-go">Đọc bài%s</span>'
-        '</a></li>' % (q["slug"], meta, esc(head), esc(sub), ic_right(16))
+        '</a></li>' % (q["slug"], thumb_img(q["slug"], "mp-thumb"), meta, esc(head), esc(sub), ic_right(16))
     )
 
 
@@ -499,7 +549,7 @@ def _jsonld(obj):
             + json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
             + "</script>")
 
-def seo_block(kind, title, desc, url, img=None, iso=None, extra=None):
+def seo_block(kind, title, desc, url, img=None, iso=None, extra=None, img_wh=None):
     tags = [
         f'<meta property="og:type" content="{kind}">',
         f'<meta property="og:site_name" content="{esc(SITE_NAME)}">',
@@ -510,6 +560,9 @@ def seo_block(kind, title, desc, url, img=None, iso=None, extra=None):
     ]
     if img:
         tags.append(f'<meta property="og:image" content="{esc(img)}">')
+        if img_wh and img_wh[0] and img_wh[1]:
+            tags.append(f'<meta property="og:image:width" content="{img_wh[0]}">')
+            tags.append(f'<meta property="og:image:height" content="{img_wh[1]}">')
     tags.append(f'<meta name="twitter:card" content="{"summary_large_image" if img else "summary"}">')
     tags.append(f'<meta name="twitter:title" content="{esc(title)}">')
     tags.append(f'<meta name="twitter:description" content="{esc(desc)}">')
@@ -553,7 +606,71 @@ def post_image(src, cfg, prods):
     return d.get("img")
 
 
-def render_article(src, seo=None):
+def enhance_article(s, slug):
+    """Trong <article>: id cho h2/h3, ảnh featured sau h1, mục lục trước h2 đầu, ảnh minh hoạ sau đoạn đầu của h2 chỉ định.
+    Mọi khối nằm giữa cặp chú thích <!--feat-->/<!--toc-->/<!--fig--> để scan_posts gỡ ra khi dựng lại."""
+    a0, a1 = s.find("<article>"), s.find("</article>")
+    if a0 < 0 or a1 < a0:
+        return s
+    art = s[a0:a1]
+    used, heads = set(), []
+
+    def add_id(m):
+        base = slugify_vi(html.unescape(re.sub(r"<[^>]+>", "", m.group(2))))
+        hid, n = base, 2
+        while hid in used:
+            hid, n = f"{base}-{n}", n + 1
+        used.add(hid)
+        heads.append((m.group(1), hid, html.unescape(re.sub(r"<[^>]+>", "", m.group(2))).strip()))
+        return f'<{m.group(1)} id="{hid}">{m.group(2)}</{m.group(1)}>'
+
+    art = _HEAD_RE.sub(add_id, art)
+    ins = []  # (vị trí, thứ tự, chuỗi chèn)
+    entry = IMAGES.get(slug) or {}
+    f = feat_of(slug)
+    h1 = art.find("</h1>")
+    if f and h1 >= 0:
+        ins.append((h1 + 5, 0, '\n<!--feat--><figure class="feat"><img src="%s" width="%d" height="%d" alt="%s" '
+                    'fetchpriority="high"></figure><!--/feat-->' % (esc(f["file"]), f["w"], f["h"], esc(f["alt"]))))
+    h2s = [m for m in re.finditer(r"<h2[ >]", art)]
+    if len(h2s) >= 2:
+        li, depth = [], 0
+        for lv, hid, text in heads:
+            if lv == "h2":
+                if depth:
+                    li.append("</ol></li>")
+                    depth = 0
+                elif li:
+                    li.append("</li>")
+                li.append('<li><a href="#%s">%s</a>' % (hid, esc(text)))
+            elif not li:
+                li.append('<li><a href="#%s">%s</a></li>' % (hid, esc(text)))
+            else:
+                if not depth:
+                    li.append("<ol>")
+                    depth = 1
+                li.append('<li><a href="#%s">%s</a></li>' % (hid, esc(text)))
+        li.append("</ol></li>" if depth else "</li>")
+        toc = ('<!--toc--><nav class="toc" aria-label="Mục lục"><details open><summary>Mục lục</summary><ol>'
+               + "".join(li) + "</ol></details></nav><!--/toc-->\n")
+        ins.append((h2s[0].start(), 1, toc))
+    for k, fig in enumerate(entry.get("figures") or []):
+        n = fig.get("after_h2", 0)
+        if not (1 <= n <= len(h2s)) or not (POSTS_DIR / slug / fig["file"]).is_file():
+            continue
+        end = h2s[n].start() if n < len(h2s) else len(art)
+        hs = art.find("</h2>", h2s[n - 1].start()) + 5
+        pe = art.find("</p>", hs, end)
+        pos = pe + 4 if pe >= 0 else hs
+        dims = ' width="%d" height="%d"' % (fig["w"], fig["h"]) if fig.get("w") and fig.get("h") else ""
+        ins.append((pos, 2 + k, '\n<!--fig--><figure><img src="%s"%s alt="%s" loading="lazy" decoding="async">'
+                    '<figcaption>%s</figcaption></figure><!--/fig-->' % (esc(fig["file"]), dims, esc(fig["alt"]), esc(fig["caption"]))))
+    for pos, _, text in sorted(ins, key=lambda x: (x[0], x[1]), reverse=True):
+        art = art[:pos] + text + art[pos:]
+    return s[:a0] + art + s[a1:]
+
+
+def render_article(src, seo=None, slug=None):
     """Chỉ đổi khung (head link, header, footer, class body); giữ nguyên title/meta/canonical/nội dung."""
     s = src
     if "fonts.googleapis.com" not in s:
@@ -568,6 +685,8 @@ def render_article(src, seo=None):
     # bảng trong bài: bọc khung cuộn ngang cho màn hẹp (chạy lại không bọc chồng)
     s = re.sub(r'(?<!<div class="tbl">)<table>', '<div class="tbl"><table>', s)
     s = re.sub(r'</table>(?!</div>)', '</table></div>', s)
+    if slug:
+        s = enhance_article(s, slug)
     if seo:
         s = put_seo(s, seo)
     return s
@@ -692,7 +811,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
 .mp-list+.mp-list{margin-top:20px}
 .mp-list[hidden]{display:none}
 .mp-list li{display:flex}
-.mp-card{display:flex;flex-direction:column;gap:10px;width:100%;padding:22px;border-radius:18px;background:#fff;border:1px solid var(--line);text-decoration:none;transition:transform .2s,box-shadow .2s}
+.mp-card{--px:22px;--py:22px;display:flex;flex-direction:column;gap:10px;width:100%;padding:var(--py) var(--px);overflow:hidden;border-radius:18px;background:#fff;border:1px solid var(--line);text-decoration:none;transition:transform .2s,box-shadow .2s}
 .mp-card:hover{transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(11,16,32,.45)}
 .mp-card:focus-visible{outline:3px solid #5B7CFA;outline-offset:2px}
 .mp-k{font-size:12px;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}
@@ -705,7 +824,10 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
 .mp-btn:hover{background:var(--ink);color:#fff}
 .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px}
 .duo+.duo{margin-top:20px}
-.post-card{display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding:36px;border-radius:26px;background:#fff;border:1px solid var(--line);text-decoration:none}
+.post-card{--px:36px;--py:36px;display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding:var(--py) var(--px);overflow:hidden;border-radius:26px;background:#fff;border:1px solid var(--line);text-decoration:none}
+.mp-thumb,.post-thumb{display:block;max-width:none;width:calc(100% + var(--px) * 2);height:auto;aspect-ratio:16/10;object-fit:cover;margin:calc(var(--py) * -1) calc(var(--px) * -1) 0;background:var(--bg)}
+.mp-thumb{margin-bottom:2px}
+.post-thumb{margin-bottom:-8px}
 .post-card-in{display:flex;flex-direction:column;gap:16px}
 .post-t{font-size:28px;line-height:1.2;font-weight:700;color:var(--ink)}
 .post-d{font-size:16px;line-height:1.6;color:var(--mut)}
@@ -738,6 +860,18 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
 .page-post table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;line-height:1.45;background:#fff;border:1px solid var(--line)}
 .page-post th,.page-post td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .page-post th{background:var(--ink);color:#fff;font-weight:600}
+.page-post .feat,.page-post figure{max-width:860px;margin:0 0 1.6em}
+.page-post figure{margin:1.6em 0}
+.page-post .feat img,.page-post figure img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff}
+.page-post figcaption{margin-top:10px;font-size:14px;line-height:1.5;color:var(--mut)}
+.page-post .toc{max-width:860px;margin:0 0 1.8em;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:16px;line-height:1.5}
+.page-post .toc summary{cursor:pointer;padding:14px 18px;font-family:'Space Grotesk',Inter,system-ui,sans-serif;font-weight:700;font-size:18px;list-style-position:inside}
+.page-post .toc ol{margin:0;padding:0 18px 14px 44px}
+.page-post .toc ol ol{padding:2px 0 0 18px;font-size:15px}
+.page-post .toc li{margin:.3em 0}
+.page-post .toc a{text-decoration:none}
+.page-post .toc a:hover{text-decoration:underline;text-decoration-color:#8FBF2E}
+.page-post h2[id],.page-post h3[id]{scroll-margin-top:16px}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.need,.series,.btn,.mp-card{transition:none}.card:hover,.mp-card:hover{transform:none}}
 
@@ -772,10 +906,10 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
   .sec-head{margin-bottom:24px}
   .h2{font-size:30px}
   .cta-box{padding:32px 24px}
-  .post-card{padding:28px 22px}
+  .post-card{--px:22px;--py:28px}
   .post-t{font-size:24px}
   .mp-h{font-size:23px}
-  .mp-card{padding:20px 18px}
+  .mp-card{--px:18px;--py:20px}
   .hide-sm{display:none}
   .page-post main{padding:36px 16px 56px;font-size:17px}
   .page-post h1{font-size:30px}
@@ -872,6 +1006,7 @@ def main():
             if update_sitemap(now.strftime("%Y-%m-%d")):
                 data_changed_files.append("sitemap.xml")
 
+    load_images()
     posts = scan_posts()
     wrote = []
     if write_if_changed(INDEX_HTML, render_index(cfg, prods, updated, posts)):
@@ -885,8 +1020,10 @@ def main():
         url = m.group(1) if m else f'{SITE_URL}bai-viet/{p["slug"]}/'
         m = re.search(r'<meta name="description" content="([^"]*)"', p["src"])
         full_desc = html.unescape(m.group(1)).strip() if m else p["desc"]
-        seo = seo_block("article", p["title"], full_desc, url, post_image(p["src"], cfg, prods), p["iso"] or None)
-        if write_if_changed(p["path"], render_article(p["src"], seo)):
+        fimg, fw, fh = feat_abs_url(p["slug"])
+        seo = seo_block("article", p["title"], full_desc, url, fimg or post_image(p["src"], cfg, prods), p["iso"] or None,
+                        img_wh=(fw, fh) if fimg else None)
+        if write_if_changed(p["path"], render_article(p["src"], seo, p["slug"])):
             wrote.append(f'bai-viet/{p["slug"]}/index.html')
     if SITEMAP.exists() and sync_sitemap_posts(posts, now_vn().strftime("%Y-%m-%d")):
         wrote.append("sitemap.xml")

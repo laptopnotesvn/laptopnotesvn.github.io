@@ -1,0 +1,700 @@
+{
+  "dell-pro-14-2025-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Dell Pro 14 PC14250 (2025) cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Dell Pro 14 PC14250 (2025) trong ảnh giới thiệu sản phẩm",
+        "caption": "Dell Pro 14 PC14250 (2025) trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 562
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Dell Pro 14 PC14250 (2025) trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Dell Pro 14 PC14250 (2025).",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 500
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro 14 PC14250 (2025) đang bán, gồm CPU, RAM, SSD, Đồ họa / màn hình",
+        "caption": "Các cấu hình Dell Pro 14 PC14250 (2025) đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 420
+      }
+    ]
+  },
+  "dell-pro-max-14-mc14250-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Dell Pro Max 14 MC14250 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Dell Pro Max 14 MC14250 trong ảnh giới thiệu sản phẩm",
+        "caption": "Dell Pro Max 14 MC14250 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 556
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Dell Pro Max 14 MC14250 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Dell Pro Max 14 MC14250.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 991
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro Max 14 MC14250 đang bán, gồm CPU, RAM, SSD, Đồ hoạ",
+        "caption": "Các cấu hình Dell Pro Max 14 MC14250 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 481
+      }
+    ]
+  },
+  "dell-pro-max-14-premium-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Dell Pro Max 14 Premium MA14250 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Dell Pro Max 14 Premium MA14250 trong ảnh giới thiệu sản phẩm",
+        "caption": "Dell Pro Max 14 Premium MA14250 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Dell Pro Max 14 Premium MA14250 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Dell Pro Max 14 Premium MA14250.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro Max 14 Premium MA14250 đang bán, gồm CPU, RAM, SSD, Đồ hoạ",
+        "caption": "Các cấu hình Dell Pro Max 14 Premium MA14250 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 627
+      }
+    ]
+  },
+  "dell-pro-max-16-mc16250-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Dell Pro Max 16 MC16250 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Dell Pro Max 16 MC16250 trong ảnh giới thiệu sản phẩm",
+        "caption": "Dell Pro Max 16 MC16250 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 597
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Dell Pro Max 16 MC16250 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Dell Pro Max 16 MC16250.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 991
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro Max 16 MC16250 đang bán, gồm CPU, RAM, SSD, Đồ hoạ",
+        "caption": "Các cấu hình Dell Pro Max 16 MC16250 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 476
+      }
+    ]
+  },
+  "dell-pro-max-16-plus-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Dell Pro Max 16 Plus MB16250 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Dell Pro Max 16 Plus MB16250 trong ảnh giới thiệu sản phẩm",
+        "caption": "Dell Pro Max 16 Plus MB16250 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 670
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Dell Pro Max 16 Plus MB16250 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Dell Pro Max 16 Plus MB16250.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro Max 16 Plus MB16250 đang bán, gồm CPU, RAM, SSD, Đồ hoạ / màn hình",
+        "caption": "Các cấu hình Dell Pro Max 16 Plus MB16250 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 669
+      }
+    ]
+  },
+  "dell-pro-max-16-premium-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Dell Pro Max 16 Premium MA16250 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Dell Pro Max 16 Premium MA16250 trong ảnh giới thiệu sản phẩm",
+        "caption": "Dell Pro Max 16 Premium MA16250 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 641
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Dell Pro Max 16 Premium MA16250 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Dell Pro Max 16 Premium MA16250.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro Max 16 Premium MA16250 đang bán, gồm CPU, RAM, SSD, Đồ hoạ, màn hình",
+        "caption": "Các cấu hình Dell Pro Max 16 Premium MA16250 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 589
+      }
+    ]
+  },
+  "dell-pro-max-18-plus-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Dell Pro Max 18 Plus MB18250 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Dell Pro Max 18 Plus MB18250 trong ảnh giới thiệu sản phẩm",
+        "caption": "Dell Pro Max 18 Plus MB18250 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 591
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Dell Pro Max 18 Plus MB18250 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Dell Pro Max 18 Plus MB18250.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 688
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro Max 18 Plus MB18250 đang bán, gồm CPU, RAM, SSD, Đồ hoạ / màn hình",
+        "caption": "Các cấu hình Dell Pro Max 18 Plus MB18250 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 420
+      }
+    ]
+  },
+  "dell-xps-13-2026-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Dell XPS 13 DX13260 (2026) cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Dell XPS 13 DX13260 (2026) trong ảnh giới thiệu sản phẩm",
+        "caption": "Dell XPS 13 DX13260 (2026) trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 347
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Dell XPS 13 DX13260 (2026) trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Dell XPS 13 DX13260 (2026).",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 640
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell XPS 13 DX13260 (2026) đang bán, gồm CPU, RAM, SSD, Màn hình / ghi chú",
+        "caption": "Các cấu hình Dell XPS 13 DX13260 (2026) đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 758
+      }
+    ]
+  },
+  "dell-xps-16-2026-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Dell XPS 16 DA16260 (2026) cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Dell XPS 16 DA16260 (2026) trong ảnh giới thiệu sản phẩm",
+        "caption": "Dell XPS 16 DA16260 (2026) trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Dell XPS 16 DA16260 (2026) trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Dell XPS 16 DA16260 (2026).",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell XPS 16 DA16260 (2026) đang bán, gồm CPU, RAM, SSD, Đồ họa / màn hình",
+        "caption": "Các cấu hình Dell XPS 16 DA16260 (2026) đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 387
+      }
+    ]
+  },
+  "hp-elitebook-8-g2i-14-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về HP EliteBook 8 G2i 14 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "HP EliteBook 8 G2i 14 trong ảnh giới thiệu sản phẩm",
+        "caption": "HP EliteBook 8 G2i 14 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của HP EliteBook 8 G2i 14 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của HP EliteBook 8 G2i 14.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình HP EliteBook 8 G2i 14 đang bán, gồm CPU, RAM, SSD, Đồ hoạ / màn hình",
+        "caption": "Các cấu hình HP EliteBook 8 G2i 14 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 420
+      }
+    ]
+  },
+  "hp-probook-4-g2i-14-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về HP ProBook 4 G2i 14 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "HP ProBook 4 G2i 14 trong ảnh giới thiệu sản phẩm",
+        "caption": "HP ProBook 4 G2i 14 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của HP ProBook 4 G2i 14 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của HP ProBook 4 G2i 14.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình HP ProBook 4 G2i 14 đang bán, gồm CPU, RAM, SSD, Đồ hoạ / màn hình",
+        "caption": "Các cấu hình HP ProBook 4 G2i 14 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 420
+      }
+    ]
+  },
+  "ideapad-slim-3-14-2026-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Lenovo IdeaPad Slim 3 14 (2026) cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Lenovo IdeaPad Slim 3 14 (2026) trong ảnh giới thiệu sản phẩm",
+        "caption": "Lenovo IdeaPad Slim 3 14 (2026) trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Lenovo IdeaPad Slim 3 14 (2026) trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Lenovo IdeaPad Slim 3 14 (2026).",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Lenovo IdeaPad Slim 3 14 (2026) đang bán, gồm CPU, RAM, SSD, Đồ hoạ / màn hình",
+        "caption": "Các cấu hình Lenovo IdeaPad Slim 3 14 (2026) đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 472
+      }
+    ]
+  },
+  "lap-trinh-vien-can-bao-nhieu-ram": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Lập trình viên cần bao nhiêu RAM",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Lập trình viên cần bao nhiêu RAM đang bán, gồm RAM tối thiểu, RAM nên có, Ghi chú",
+        "caption": "Các cấu hình Lập trình viên cần bao nhiêu RAM đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 6,
+        "w": 1200,
+        "h": 1074
+      }
+    ]
+  },
+  "thinkbook-14-g8-2025-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Lenovo ThinkBook 14 G8 IRL (2025) cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Lenovo ThinkBook 14 G8 IRL (2025) trong ảnh giới thiệu sản phẩm",
+        "caption": "Lenovo ThinkBook 14 G8 IRL (2025) trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 688
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Lenovo ThinkBook 14 G8 IRL (2025) trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Lenovo ThinkBook 14 G8 IRL (2025).",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Lenovo ThinkBook 14 G8 IRL (2025) đang bán, gồm CPU, RAM, SSD, Đồ hoạ / màn hình",
+        "caption": "Các cấu hình Lenovo ThinkBook 14 G8 IRL (2025) đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 472
+      }
+    ]
+  },
+  "thinkpad-e14-gen-8-2026-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Lenovo ThinkPad E14 Gen 8 (2026) cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Lenovo ThinkPad E14 Gen 8 (2026) trong ảnh giới thiệu sản phẩm",
+        "caption": "Lenovo ThinkPad E14 Gen 8 (2026) trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Lenovo ThinkPad E14 Gen 8 (2026) trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Lenovo ThinkPad E14 Gen 8 (2026).",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Lenovo ThinkPad E14 Gen 8 (2026) đang bán, gồm CPU, RAM, SSD, Đồ họa / hệ điều hành",
+        "caption": "Các cấu hình Lenovo ThinkPad E14 Gen 8 (2026) đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 632
+      }
+    ]
+  },
+  "thinkpad-p1-gen-8-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Lenovo ThinkPad P1 Gen 8 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Lenovo ThinkPad P1 Gen 8 trong ảnh giới thiệu sản phẩm",
+        "caption": "Lenovo ThinkPad P1 Gen 8 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 624
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Lenovo ThinkPad P1 Gen 8 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Lenovo ThinkPad P1 Gen 8.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Lenovo ThinkPad P1 Gen 8 đang bán, gồm CPU, RAM, SSD, Đồ họa / màn hình",
+        "caption": "Các cấu hình Lenovo ThinkPad P1 Gen 8 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 547
+      }
+    ]
+  },
+  "thinkpad-p16-gen-3-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Lenovo ThinkPad P16 Gen 3 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Lenovo ThinkPad P16 Gen 3 trong ảnh giới thiệu sản phẩm",
+        "caption": "Lenovo ThinkPad P16 Gen 3 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Lenovo ThinkPad P16 Gen 3 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Lenovo ThinkPad P16 Gen 3.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Lenovo ThinkPad P16 Gen 3 đang bán, gồm CPU, RAM, SSD, Đồ họa / màn hình",
+        "caption": "Các cấu hình Lenovo ThinkPad P16 Gen 3 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 547
+      }
+    ]
+  },
+  "thinkpad-t14-gen-6-2025-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Lenovo ThinkPad T14 Gen 6 (2025) cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Lenovo ThinkPad T14 Gen 6 (2025) trong ảnh giới thiệu sản phẩm",
+        "caption": "Lenovo ThinkPad T14 Gen 6 (2025) trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 626
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Lenovo ThinkPad T14 Gen 6 (2025) trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Lenovo ThinkPad T14 Gen 6 (2025).",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 624
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Lenovo ThinkPad T14 Gen 6 (2025) đang bán, gồm CPU, RAM, SSD, Đồ họa / hệ điều hành",
+        "caption": "Các cấu hình Lenovo ThinkPad T14 Gen 6 (2025) đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 726
+      }
+    ]
+  },
+  "thinkpad-t14-gen-7-2026-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Lenovo ThinkPad T14 Gen 7 (2026) cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Lenovo ThinkPad T14 Gen 7 (2026) trong ảnh giới thiệu sản phẩm",
+        "caption": "Lenovo ThinkPad T14 Gen 7 (2026) trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 626
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Lenovo ThinkPad T14 Gen 7 (2026) trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Lenovo ThinkPad T14 Gen 7 (2026).",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Lenovo ThinkPad T14 Gen 7 (2026) đang bán, gồm CPU, RAM, SSD, Đồ họa / màn hình",
+        "caption": "Các cấu hình Lenovo ThinkPad T14 Gen 7 (2026) đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 599
+      }
+    ]
+  },
+  "thinkpad-t1g-gen-8-2026-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Lenovo ThinkPad T1G Gen 8 (2026) cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Lenovo ThinkPad T1G Gen 8 (2026) trong ảnh giới thiệu sản phẩm",
+        "caption": "Lenovo ThinkPad T1G Gen 8 (2026) trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 750
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Lenovo ThinkPad T1G Gen 8 (2026) trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Lenovo ThinkPad T1G Gen 8 (2026).",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 750
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Lenovo ThinkPad T1G Gen 8 (2026) đang bán, gồm CPU, RAM, SSD, Đồ họa / màn hình",
+        "caption": "Các cấu hình Lenovo ThinkPad T1G Gen 8 (2026) đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 599
+      }
+    ]
+  },
+  "thinkpad-x1-carbon-gen-14-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về Lenovo ThinkPad X1 Carbon Gen 14 cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "Lenovo ThinkPad X1 Carbon Gen 14 trong ảnh giới thiệu sản phẩm",
+        "caption": "Lenovo ThinkPad X1 Carbon Gen 14 trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của Lenovo ThinkPad X1 Carbon Gen 14 trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của Lenovo ThinkPad X1 Carbon Gen 14.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Lenovo ThinkPad X1 Carbon Gen 14 đang bán, gồm CPU, RAM, SSD, Đồ họa / màn hình",
+        "caption": "Các cấu hình Lenovo ThinkPad X1 Carbon Gen 14 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 693
+      }
+    ]
+  }
+}
