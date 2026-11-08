@@ -2,58 +2,205 @@
   "base": "https://hungphatlaptop.com/",
   "groups": [
     {
-      "id": "gon-nhe", "num": "01", "tag": "GỌN NHẸ", "short": "Gọn nhẹ, mang đi làm", "grid": "grid4",
+      "id": "gon-nhe",
+      "num": "01",
+      "tag": "GỌN NHẸ",
+      "short": "Gọn nhẹ, mang đi làm",
+      "grid": "grid4",
       "title": "Gọn nhẹ, mang đi làm mỗi ngày",
       "desc": "Hợp với lập trình web, mobile, backend chạy trên server. Ưu tiên máy nhẹ, pin lâu, bàn phím tốt."
     },
     {
-      "id": "sinh-vien", "num": "02", "tag": "DỄ MUA", "short": "Sinh viên, mới đi làm", "grid": "grid3",
+      "id": "sinh-vien",
+      "num": "02",
+      "tag": "DỄ MUA",
+      "short": "Sinh viên, mới đi làm",
+      "grid": "grid4",
       "title": "Tầm giá dễ mua cho sinh viên và người mới đi làm",
       "desc": "Máy bền, bàn phím tốt, đủ sức học và làm dự án đầu tay mà không phải bỏ quá nhiều tiền."
     },
     {
-      "id": "may-tram", "num": "03", "tag": "MÁY TRẠM", "short": "Docker, máy ảo, AI", "grid": "grid3",
+      "id": "may-tram",
+      "num": "03",
+      "tag": "MÁY TRẠM",
+      "short": "Docker, máy ảo, AI",
+      "grid": "grid4",
       "title": "Máy trạm cho Docker, máy ảo, build lớn và AI",
       "desc": "Khi phải chạy nhiều container, build dự án lớn, giả lập Android hoặc thử mô hình AI tại máy, nên chọn máy trạm có RAM lớn và tản nhiệt tốt."
     }
   ],
   "products": [
-    {"slug": "lenovo-thinkpad-t14-gen-7-2026", "group": "gon-nhe", "brand": "Lenovo",
-     "name": "Lenovo ThinkPad T14 Gen 7 (2026)",
-     "blurb": "Dòng ThinkPad T nổi tiếng về bàn phím, hợp người gõ code nhiều giờ liền."},
-    {"slug": "dell-xps-13-dx13260-2026", "group": "gon-nhe", "brand": "Dell",
-     "name": "DELL XPS 13 DX13260 (2026)",
-     "blurb": "Nhỏ gọn, màn hình đẹp, dễ mang theo khắp nơi."},
-    {"slug": "hp-elitebook-8-g2i-14-next-gen-ai-2026", "group": "gon-nhe", "brand": "HP",
-     "name": "HP EliteBook 8 G2i 14 Next Gen AI (2026)",
-     "blurb": "Máy doanh nhân vỏ chắc, bảo mật tốt cho dân code làm ở công ty."},
-    {"slug": "lenovo-thinkpad-x1-carbon-gen-14-aura-edition-2026", "group": "gon-nhe", "brand": "Lenovo",
-     "name": "Lenovo ThinkPad X1 Carbon Gen 14 | Aura Edition (2026)",
-     "blurb": "Máy nhẹ nhất dòng ThinkPad mà vẫn đủ sức code cả ngày."},
-    {"slug": "lenovo-thinkpad-t14-gen-6-2025", "group": "sinh-vien", "brand": "Lenovo",
-     "name": "Lenovo ThinkPad T14 Gen 6 (2025)",
-     "blurb": "Bản dễ mua của dòng T, vẫn giữ bàn phím và độ bền quen thuộc."},
-    {"slug": "dell-pro-max-14-mc14250-mobile-workstation-2025", "group": "sinh-vien", "brand": "Dell",
-     "name": "DELL Pro Max 14 MC14250 - Mobile Workstation (2025)",
-     "blurb": "Màn hình 14 inch gọn, dòng máy trạm mới của Dell, hợp người học IT cần máy bền."},
-    {"slug": "dell-pro-max-16-mc16250-mobile-workstation-2025", "group": "sinh-vien", "brand": "Dell",
-     "name": "DELL Pro Max 16 MC16250 - Mobile Workstation (2025)",
-     "blurb": "Màn hình lớn để chia đôi cửa sổ code và tài liệu."},
-    {"slug": "lenovo-thinkpad-p1-gen-8-mobile-workstation-2025", "group": "may-tram", "brand": "Lenovo",
-     "name": "Lenovo ThinkPad P1 Gen 8 - Mobile WorkStation (2025)",
-     "blurb": "Máy trạm mỏng, màn hình 16 inch, hợp kỹ sư phần mềm cần sức mạnh mà vẫn mang đi được."},
-    {"slug": "dell-pro-max-16-premium-ma16250-mobile-workstation-2025", "group": "may-tram", "brand": "Dell",
-     "name": "Dell Pro Max 16 Premium MA16250 - Mobile Workstation (2025)",
-     "blurb": "Máy trạm Dell bản cao để chạy nhiều tác vụ nặng cùng lúc."},
-    {"slug": "dell-xps-16-da16260-2026", "group": "may-tram", "brand": "Dell",
-     "name": "DELL XPS 16 DA16260 (2026)",
-     "blurb": "Vừa code vừa làm đồ hoạ, dựng video trên một máy đẹp."}
+    {
+      "slug": "lenovo-thinkpad-t14-gen-7-2026",
+      "group": "gon-nhe",
+      "brand": "Lenovo",
+      "name": "Lenovo ThinkPad T14 Gen 7 (2026)",
+      "blurb": "Dòng ThinkPad T nổi tiếng về bàn phím, hợp người gõ code nhiều giờ liền."
+    },
+    {
+      "slug": "dell-xps-13-dx13260-2026",
+      "group": "gon-nhe",
+      "brand": "Dell",
+      "name": "DELL XPS 13 DX13260 (2026)",
+      "blurb": "Nhỏ gọn, màn hình đẹp, dễ mang theo khắp nơi."
+    },
+    {
+      "slug": "hp-elitebook-8-g2i-14-next-gen-ai-2026",
+      "group": "gon-nhe",
+      "brand": "HP",
+      "name": "HP EliteBook 8 G2i 14 Next Gen AI (2026)",
+      "blurb": "Máy doanh nhân vỏ chắc, bảo mật tốt cho dân code làm ở công ty."
+    },
+    {
+      "slug": "lenovo-thinkpad-x1-carbon-gen-14-aura-edition-2026",
+      "group": "gon-nhe",
+      "brand": "Lenovo",
+      "name": "Lenovo ThinkPad X1 Carbon Gen 14 | Aura Edition (2026)",
+      "blurb": "Máy nhẹ nhất dòng ThinkPad mà vẫn đủ sức code cả ngày."
+    },
+    {
+      "slug": "lenovo-thinkpad-t14-gen-6-2025",
+      "group": "sinh-vien",
+      "brand": "Lenovo",
+      "name": "Lenovo ThinkPad T14 Gen 6 (2025)",
+      "blurb": "Bản dễ mua của dòng T, vẫn giữ bàn phím và độ bền quen thuộc."
+    },
+    {
+      "slug": "dell-pro-max-14-mc14250-mobile-workstation-2025",
+      "group": "sinh-vien",
+      "brand": "Dell",
+      "name": "DELL Pro Max 14 MC14250 - Mobile Workstation (2025)",
+      "blurb": "Màn hình 14 inch gọn, dòng máy trạm mới của Dell, hợp người học IT cần máy bền."
+    },
+    {
+      "slug": "dell-pro-max-16-mc16250-mobile-workstation-2025",
+      "group": "sinh-vien",
+      "brand": "Dell",
+      "name": "DELL Pro Max 16 MC16250 - Mobile Workstation (2025)",
+      "blurb": "Màn hình lớn để chia đôi cửa sổ code và tài liệu."
+    },
+    {
+      "slug": "dell-pro-14-pc14250-2025",
+      "group": "sinh-vien",
+      "brand": "Dell",
+      "name": "DELL Pro 14 PC14250 (2025)",
+      "blurb": "Máy văn phòng 14 inch giá mềm, đủ cho học lập trình và làm bài tập nhóm."
+    },
+    {
+      "slug": "lenovo-ideapad-slim-3-14-inch-2026",
+      "group": "sinh-vien",
+      "brand": "Lenovo",
+      "name": "Lenovo IdeaPad Slim 3 14 inch (2026)",
+      "blurb": "Mỏng nhẹ, pin ổn, hợp sinh viên mang lên lớp mỗi ngày."
+    },
+    {
+      "slug": "lenovo-thinkbook-14-g8-irl-2025",
+      "group": "sinh-vien",
+      "brand": "Lenovo",
+      "name": "Lenovo ThinkBook 14 G8 IRL (2025)",
+      "blurb": "Vỏ kim loại, nhiều cổng, gõ code lâu không mỏi tay."
+    },
+    {
+      "slug": "hp-probook-4-g2i-14-ai-2026",
+      "group": "sinh-vien",
+      "brand": "HP",
+      "name": "HP ProBook 4 G2i 14 AI (2026)",
+      "blurb": "Dòng doanh nghiệp đời mới, bền và dễ nâng cấp RAM."
+    },
+    {
+      "slug": "lenovo-thinkpad-e14-gen-8-2026",
+      "group": "sinh-vien",
+      "brand": "Lenovo",
+      "name": "Lenovo ThinkPad E14 Gen 8 (2026)",
+      "blurb": "ThinkPad giá vừa túi tiền, bàn phím chuẩn cho người viết code nhiều."
+    },
+    {
+      "slug": "lenovo-thinkpad-p1-gen-8-mobile-workstation-2025",
+      "group": "may-tram",
+      "brand": "Lenovo",
+      "name": "Lenovo ThinkPad P1 Gen 8 - Mobile WorkStation (2025)",
+      "blurb": "Máy trạm mỏng, màn hình 16 inch, hợp kỹ sư phần mềm cần sức mạnh mà vẫn mang đi được."
+    },
+    {
+      "slug": "dell-pro-max-16-premium-ma16250-mobile-workstation-2025",
+      "group": "may-tram",
+      "brand": "Dell",
+      "name": "Dell Pro Max 16 Premium MA16250 - Mobile Workstation (2025)",
+      "blurb": "Máy trạm Dell bản cao để chạy nhiều tác vụ nặng cùng lúc."
+    },
+    {
+      "slug": "dell-xps-16-da16260-2026",
+      "group": "may-tram",
+      "brand": "Dell",
+      "name": "DELL XPS 16 DA16260 (2026)",
+      "blurb": "Vừa code vừa làm đồ hoạ, dựng video trên một máy đẹp."
+    },
+    {
+      "slug": "dell-pro-max-14-premium-ma14250-mobile-workstation-2025",
+      "group": "may-tram",
+      "brand": "Dell",
+      "name": "DELL Pro Max 14 Premium MA14250 - Mobile Workstation (2025)",
+      "blurb": "Máy trạm 14 inch gọn nhẹ, đủ sức chạy Docker và máy ảo khi đi công tác."
+    },
+    {
+      "slug": "dell-pro-max-16-plus-mb16250-mobile-workstation-2025",
+      "group": "may-tram",
+      "brand": "Dell",
+      "name": "DELL Pro Max 16 Plus MB16250 - Mobile Workstation (2025)",
+      "blurb": "Card đồ hoạ rời mạnh, hợp build lớn và thử mô hình AI tại máy."
+    },
+    {
+      "slug": "lenovo-thinkpad-t1g-gen-8-2026",
+      "group": "may-tram",
+      "brand": "Lenovo",
+      "name": "Lenovo ThinkPad T1G Gen 8 (2026)",
+      "blurb": "ThinkPad có card rời, vừa làm việc nặng vừa giữ bàn phím quen thuộc."
+    },
+    {
+      "slug": "lenovo-thinkpad-p16-gen-3-mobile-workstation-2025",
+      "group": "may-tram",
+      "brand": "Lenovo",
+      "name": "Lenovo ThinkPad P16 Gen 3 - Mobile WorkStation (2025)",
+      "blurb": "Máy trạm 16 inch nhiều khe RAM, chạy cả cụm container không đuối."
+    },
+    {
+      "slug": "dell-pro-max-18-plus-mb18250-mobile-workstation-2025",
+      "group": "may-tram",
+      "brand": "Dell",
+      "name": "DELL Pro Max 18 Plus MB18250 - Mobile Workstation (2025)",
+      "blurb": "Màn hình 18 inch lớn nhất dòng, cấu hình cao cho việc nặng nhất."
+    }
   ],
   "series": [
-    {"brand": "LENOVO", "name": "ThinkPad T Series", "slug": "thinkpad-t-series", "desc": "Dòng chủ lực, bàn phím gõ êm và bền."},
-    {"brand": "LENOVO", "name": "ThinkPad X Series", "slug": "thinkpad-x-series", "desc": "Mỏng nhẹ cao cấp như X1 Carbon, X1 2-in-1."},
-    {"brand": "LENOVO", "name": "ThinkPad P Series", "slug": "thinkpad-p-series", "desc": "Máy trạm cho đồ hoạ, kỹ thuật, AI."},
-    {"brand": "DELL", "name": "Dell Pro Max", "slug": "dell-pro-max", "desc": "Thế hệ máy trạm mới của Dell từ năm 2025."},
-    {"brand": "DELL", "name": "Dell XPS", "slug": "dell-xps", "desc": "Thiết kế đẹp, mỏng nhẹ, màn hình sắc nét."}
+    {
+      "brand": "LENOVO",
+      "name": "ThinkPad T Series",
+      "slug": "thinkpad-t-series",
+      "desc": "Dòng chủ lực, bàn phím gõ êm và bền."
+    },
+    {
+      "brand": "LENOVO",
+      "name": "ThinkPad X Series",
+      "slug": "thinkpad-x-series",
+      "desc": "Mỏng nhẹ cao cấp như X1 Carbon, X1 2-in-1."
+    },
+    {
+      "brand": "LENOVO",
+      "name": "ThinkPad P Series",
+      "slug": "thinkpad-p-series",
+      "desc": "Máy trạm cho đồ hoạ, kỹ thuật, AI."
+    },
+    {
+      "brand": "DELL",
+      "name": "Dell Pro Max",
+      "slug": "dell-pro-max",
+      "desc": "Thế hệ máy trạm mới của Dell từ năm 2025."
+    },
+    {
+      "brand": "DELL",
+      "name": "Dell XPS",
+      "slug": "dell-xps",
+      "desc": "Thiết kế đẹp, mỏng nhẹ, màn hình sắc nét."
+    }
   ]
 }

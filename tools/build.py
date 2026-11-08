@@ -651,7 +651,7 @@ def main():
 
     if args.offline:
         if not state or any(s not in old_prods for s in slugs):
-            print("--offline cần tools/state.json đủ 10 sản phẩm (chạy online trước)", file=sys.stderr)
+            print("--offline cần tools/state.json đủ mọi sản phẩm (chạy online trước)", file=sys.stderr)
             return 1
         prods, updated = old_prods, state["updated"]
     else:
