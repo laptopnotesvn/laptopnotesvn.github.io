@@ -279,6 +279,84 @@ def card(p, d, base):
 </div>
 </article>'''
 
+MODEL_SUFFIX = "-lap-trinh"
+MODEL_GROUP_ORDER = ["sinh-vien", "gon-nhe", "may-tram"]
+MODEL_VISIBLE = 12  # 3 hàng x 4 bài; phần còn lại ẩn tới khi bấm "Xem thêm"
+
+
+def split_model_posts(cfg, posts):
+    """Tách bài 'máy X cho lập trình' (slug đuôi -lap-trinh) khỏi bài thường.
+    Thứ tự theo nhóm sinh-vien, gon-nhe, may-tram rồi theo products.json."""
+    base = cfg["base"]
+    models = [q for q in posts if q["slug"].endswith(MODEL_SUFFIX)]
+    others = [q for q in posts if not q["slug"].endswith(MODEL_SUFFIX)]
+    order = {g: i for i, g in enumerate(MODEL_GROUP_ORDER)}
+    prods = sorted(cfg["products"], key=lambda p: order.get(p.get("group"), 9))
+    out, used = [], set()
+    for p in prods:
+        needle = 'href="%s%s/"' % (base, p["slug"])
+        for q in models:
+            if q["slug"] not in used and needle in q["src"]:
+                out.append((q, p))
+                used.add(q["slug"])
+                break
+    out += [(q, None) for q in models if q["slug"] not in used]
+    return out, others
+
+
+def model_card(q, p):
+    head, _, sub = q["title"].partition(" - ")
+    head = head.replace(" cho lập trình", "").strip()
+    tb = re.search(r"<tbody>(.*?)</tbody>", q["src"], re.S)
+    n = len(re.findall(r"<tr>", tb.group(1))) if tb else 0
+    brand = esc(p.get("brand", "")) if p else ""
+    brand = brand or "Bài viết"
+    meta = "%s · %d cấu hình" % (brand, n) if n else brand
+    return (
+        '<li><a class="mp-card" href="bai-viet/%s/">'
+        '<span class="mono mp-k">%s</span>'
+        '<span class="hd mp-t">%s</span>'
+        '<span class="mp-d">%s</span>'
+        '<span class="mp-go">Đọc bài%s</span>'
+        '</a></li>' % (q["slug"], meta, esc(head), esc(sub), ic_right(16))
+    )
+
+
+MP_JS = ('<script>(function(){var b=document.querySelector(".mp-btn"),m=document.getElementById("mp-more");'
+         'if(!b||!m)return;b.addEventListener("click",function(){m.hidden=false;'
+         'b.setAttribute("aria-expanded","true");var a=m.querySelector("a");b.parentNode.remove();'
+         'if(a)a.focus({preventScroll:true});});})();</script>')
+
+
+def model_block(items):
+    if not items:
+        return ""
+    vis, more = items[:MODEL_VISIBLE], items[MODEL_VISIBLE:]
+    parts = [
+        '<div class="mp" id="bai-may">',
+        '<div class="mp-head">',
+        '<span class="mono kicker">BÀI XEM KỸ TỪNG MÁY</span>',
+        '<h3 class="hd mp-h">Thiết kế, độ gọn và từng cấu hình cho người viết code</h3>',
+        '<p class="sec-desc">Mỗi bài nói về một mẫu máy: vỏ và bàn phím ra sao, mang đi có nhẹ không, '
+        'có mấy cấu hình và bản nào hợp kiểu lập trình nào.</p>',
+        '</div>',
+        '<ul class="mp-list grid4">',
+        "\n".join(model_card(q, p) for q, p in vis),
+        '</ul>',
+    ]
+    if more:
+        parts += [
+            '<ul class="mp-list grid4" id="mp-more" hidden>',
+            "\n".join(model_card(q, p) for q, p in more),
+            '</ul>',
+            '<div class="mp-row"><button class="btn mp-btn" type="button" aria-controls="mp-more" '
+            'aria-expanded="false">Xem thêm %d bài%s</button></div>' % (len(more), ic_down(16)),
+            MP_JS,
+        ]
+    parts.append('</div>')
+    return "\n".join(parts)
+
+
 def render_index(cfg, prods, updated, posts):
     base = cfg["base"]
     groups = cfg["groups"]
@@ -297,6 +375,7 @@ def render_index(cfg, prods, updated, posts):
 {ic_right(20)}
 </a>''' for g in groups)
 
+    model_items, posts = split_model_posts(cfg, posts)
     sections = []
     for g in groups:
         cards = "\n".join(card(p, prods[p["slug"]], base) for p in by_group[g["id"]])
@@ -312,6 +391,7 @@ def render_index(cfg, prods, updated, posts):
 <div class="{g["grid"]}">
 {cards}
 </div>
+{model_block(model_items) if g["id"] == "sinh-vien" else ""}
 </section>''')
 
     series = "\n".join(f'''<div class="series">
@@ -413,6 +493,9 @@ def render_article(src):
     s = re.sub(r"<footer\b.*?</footer>", lambda m: footer("../../"), s, count=1, flags=re.S)
     if '<main id="main">' not in s:
         s = s.replace("<main>", '<main id="main">', 1)
+    # bảng trong bài: bọc khung cuộn ngang cho màn hẹp (chạy lại không bọc chồng)
+    s = re.sub(r'(?<!<div class="tbl">)<table>', '<div class="tbl"><table>', s)
+    s = re.sub(r'</table>(?!</div>)', '</table></div>', s)
     return s
 
 # ---------------------------------------------------------------- CSS
@@ -528,6 +611,24 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
 .s-more{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--acc)}
 
 .post-sec{padding-top:88px;padding-bottom:96px}
+.mp{margin-top:56px}
+.mp-head{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.mp-h{font-size:28px;line-height:1.2;margin:0;font-weight:700}
+.mp-list{list-style:none;margin:0;padding:0}
+.mp-list+.mp-list{margin-top:20px}
+.mp-list[hidden]{display:none}
+.mp-list li{display:flex}
+.mp-card{display:flex;flex-direction:column;gap:10px;width:100%;padding:22px;border-radius:18px;background:#fff;border:1px solid var(--line);text-decoration:none;transition:transform .2s,box-shadow .2s}
+.mp-card:hover{transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(11,16,32,.45)}
+.mp-card:focus-visible{outline:3px solid #5B7CFA;outline-offset:2px}
+.mp-k{font-size:12px;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}
+.mp-t{font-size:18px;line-height:1.3;font-weight:600;color:var(--ink)}
+.mp-d{font-size:14.5px;line-height:1.5;color:var(--mut);flex:1}
+.mp-go{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--ink);min-height:32px}
+.mp-card:hover .mp-go{text-decoration:underline;text-underline-offset:3px}
+.mp-row{display:flex;justify-content:center;margin-top:24px}
+.mp-btn{min-height:48px;padding:0 24px;border-radius:999px;border:1px solid var(--ink);background:#fff;color:var(--ink);font:inherit;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.mp-btn:hover{background:var(--ink);color:#fff}
 .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px}
 .duo+.duo{margin-top:20px}
 .post-card{display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding:36px;border-radius:26px;background:#fff;border:1px solid var(--line);text-decoration:none}
@@ -556,8 +657,15 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
 .page-post main a{text-decoration:underline;text-decoration-color:#8FBF2E;text-decoration-thickness:2px;text-underline-offset:3px}
 .page-post main a:hover{text-decoration-color:var(--ink)}
 .page-post .gia{color:var(--mut);font-size:15px;margin-top:2em}
+.page-post h3{font-family:'Space Grotesk',Inter,system-ui,sans-serif;letter-spacing:-0.01em;font-size:21px;line-height:1.3;margin:1.6em 0 .4em;font-weight:700}
+.page-post article ul{margin:0 0 1.1em;padding-left:1.3em}
+.page-post article li{margin:0 0 .35em}
+.page-post .tbl{overflow-x:auto;margin:0 0 1.4em;-webkit-overflow-scrolling:touch}
+.page-post table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;line-height:1.45;background:#fff;border:1px solid var(--line)}
+.page-post th,.page-post td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.page-post th{background:var(--ink);color:#fff;font-weight:600}
 
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.need,.series,.btn{transition:none}.card:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.need,.series,.btn,.mp-card{transition:none}.card:hover,.mp-card:hover{transform:none}}
 
 @media (max-width:1180px){
   .grid4{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -592,6 +700,8 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #5B7CFA;outline-offset:3px;
   .cta-box{padding:32px 24px}
   .post-card{padding:28px 22px}
   .post-t{font-size:24px}
+  .mp-h{font-size:23px}
+  .mp-card{padding:20px 18px}
   .hide-sm{display:none}
   .page-post main{padding:36px 16px 56px;font-size:17px}
   .page-post h1{font-size:30px}
