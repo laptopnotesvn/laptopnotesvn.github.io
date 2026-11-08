@@ -24,7 +24,7 @@ STYLE_CSS = ROOT / "style.css"
 SITEMAP = ROOT / "sitemap.xml"
 POSTS_DIR = ROOT / "bai-viet"
 
-SITE_URL = "https://phatlam1108.github.io/laptop-lap-trinh/"
+SITE_URL = "https://laptopnotesvn.github.io/"
 API = "https://hungphatlaptop.com/wp-json/wc/store/v1/products?slug="
 UA = "Mozilla/5.0 (compatible; PriceSync/1.0)"
 TIMEOUT = 20
