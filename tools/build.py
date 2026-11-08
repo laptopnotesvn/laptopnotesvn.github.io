@@ -22,6 +22,8 @@ STATE_JSON = TOOLS / "state.json"
 INDEX_HTML = ROOT / "index.html"
 STYLE_CSS = ROOT / "style.css"
 SITEMAP = ROOT / "sitemap.xml"
+ROBOTS_TXT = ROOT / "robots.txt"
+ROBOTS = "User-agent: *\nAllow: /\n\nSitemap: https://laptopnotesvn.github.io/sitemap.xml\n"
 POSTS_DIR = ROOT / "bai-viet"
 
 SITE_URL = "https://laptopnotesvn.github.io/"
@@ -410,6 +412,12 @@ def render_index(cfg, prods, updated, posts):
     checks = "\n".join(f'<div><span class="chk">{ic_check(14)}</span> {t}</div>' for t in (
         "RAM đủ cho IDE, trình duyệt, Docker", "Bàn phím gõ lâu không mỏi",
         "Màn hình dễ nhìn cả ngày", "Pin đủ một buổi làm việc"))
+    all_posts = [q for q, _ in model_items] + posts
+    item_list = {"@context": "https://schema.org", "@type": "ItemList", "name": "Bài viết về laptop cho lập trình",
+                 "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": q["title"],
+                                      "url": f'{SITE_URL}bai-viet/{q["slug"]}/'} for i, q in enumerate(all_posts)]}
+    seo_home = seo_block("website", title, desc, SITE_URL, (hero_d or {}).get("img"),
+                         extra=item_list if all_posts else None)
 
     return f'''<!doctype html>
 <html lang="vi">
@@ -421,6 +429,7 @@ def render_index(cfg, prods, updated, posts):
 <link rel="canonical" href="{SITE_URL}">
 {FONTS}
 <link rel="stylesheet" href="style.css">
+{seo_home}
 </head>
 <body>
 <a class="skip" href="#main">Bỏ qua đến nội dung</a>
@@ -481,7 +490,70 @@ def render_index(cfg, prods, updated, posts):
 </html>
 '''
 
-def render_article(src):
+# ---------------------------------------------------------------- SEO: Open Graph + JSON-LD (khối giữa <!--seo--> ... <!--/seo-->, dựng lại mỗi lần build)
+SITE_NAME = "Laptop Lập Trình"
+_SEO_RE = re.compile(r"\n?<!--seo-->.*?<!--/seo-->", re.S)
+
+def _jsonld(obj):
+    return ('<script type="application/ld+json">'
+            + json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+            + "</script>")
+
+def seo_block(kind, title, desc, url, img=None, iso=None, extra=None):
+    tags = [
+        f'<meta property="og:type" content="{kind}">',
+        f'<meta property="og:site_name" content="{esc(SITE_NAME)}">',
+        '<meta property="og:locale" content="vi_VN">',
+        f'<meta property="og:title" content="{esc(title)}">',
+        f'<meta property="og:description" content="{esc(desc)}">',
+        f'<meta property="og:url" content="{esc(url)}">',
+    ]
+    if img:
+        tags.append(f'<meta property="og:image" content="{esc(img)}">')
+    tags.append(f'<meta name="twitter:card" content="{"summary_large_image" if img else "summary"}">')
+    tags.append(f'<meta name="twitter:title" content="{esc(title)}">')
+    tags.append(f'<meta name="twitter:description" content="{esc(desc)}">')
+    if img:
+        tags.append(f'<meta name="twitter:image" content="{esc(img)}">')
+    if kind == "article" and iso:
+        tags.append(f'<meta property="article:published_time" content="{iso}T08:00:00+07:00">')
+    org = {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL}
+    if kind == "article":
+        art = {"@context": "https://schema.org", "@type": "Article", "headline": title[:110],
+               "description": desc, "inLanguage": "vi-VN", "url": url,
+               "mainEntityOfPage": {"@type": "WebPage", "@id": url}, "author": org, "publisher": org}
+        if iso:
+            art["datePublished"] = art["dateModified"] = f"{iso}T08:00:00+07:00"
+        if img:
+            art["image"] = [img]
+        crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": SITE_URL},
+            {"@type": "ListItem", "position": 2, "name": "Bài viết", "item": SITE_URL + "#bai-viet"},
+            {"@type": "ListItem", "position": 3, "name": title, "item": url}]}
+        tags += [_jsonld(art), _jsonld(crumbs)]
+    else:
+        tags.append(_jsonld({"@context": "https://schema.org", "@type": "WebSite", "name": SITE_NAME,
+                             "url": SITE_URL, "inLanguage": "vi-VN", "description": desc}))
+    if extra:
+        tags.append(_jsonld(extra))
+    return "<!--seo-->\n" + "\n".join(tags) + "\n<!--/seo-->"
+
+def put_seo(page, block):
+    page = _SEO_RE.sub("", page)
+    return page.replace("</head>", block + "\n</head>", 1)
+
+def post_image(src, cfg, prods):
+    """Ảnh đại diện bài = ảnh sản phẩm đầu tiên được link trong bài; không có thì ảnh máy đầu trang chủ."""
+    base = cfg["base"]
+    for m in re.finditer(r'href="' + re.escape(base) + r'([a-z0-9-]+)/"', src):
+        d = prods.get(m.group(1))
+        if d and d.get("img"):
+            return d["img"]
+    d = prods.get(cfg["products"][0]["slug"]) or {}
+    return d.get("img")
+
+
+def render_article(src, seo=None):
     """Chỉ đổi khung (head link, header, footer, class body); giữ nguyên title/meta/canonical/nội dung."""
     s = src
     if "fonts.googleapis.com" not in s:
@@ -496,6 +568,8 @@ def render_article(src):
     # bảng trong bài: bọc khung cuộn ngang cho màn hẹp (chạy lại không bọc chồng)
     s = re.sub(r'(?<!<div class="tbl">)<table>', '<div class="tbl"><table>', s)
     s = re.sub(r'</table>(?!</div>)', '</table></div>', s)
+    if seo:
+        s = put_seo(s, seo)
     return s
 
 # ---------------------------------------------------------------- CSS
@@ -804,8 +878,15 @@ def main():
         wrote.append("index.html")
     if write_if_changed(STYLE_CSS, CSS):
         wrote.append("style.css")
+    if write_if_changed(ROBOTS_TXT, ROBOTS):
+        wrote.append("robots.txt")
     for p in posts:
-        if write_if_changed(p["path"], render_article(p["src"])):
+        m = re.search(r'<link rel="canonical" href="([^"]+)"', p["src"])
+        url = m.group(1) if m else f'{SITE_URL}bai-viet/{p["slug"]}/'
+        m = re.search(r'<meta name="description" content="([^"]*)"', p["src"])
+        full_desc = html.unescape(m.group(1)).strip() if m else p["desc"]
+        seo = seo_block("article", p["title"], full_desc, url, post_image(p["src"], cfg, prods), p["iso"] or None)
+        if write_if_changed(p["path"], render_article(p["src"], seo)):
             wrote.append(f'bai-viet/{p["slug"]}/index.html')
     if SITEMAP.exists() and sync_sitemap_posts(posts, now_vn().strftime("%Y-%m-%d")):
         wrote.append("sitemap.xml")
