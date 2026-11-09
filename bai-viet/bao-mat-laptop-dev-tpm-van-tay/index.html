@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bảo mật laptop dev - TPM, vân tay, mã hóa ổ và những thiết lập nên bật</title>
+<meta name="description" content="Giải thích TPM, Windows Hello vân tay, mã hóa ổ đĩa, smart card cho laptop dev: bảo vệ mã nguồn, khóa SSH và tài khoản, kèm máy đang bán có tính năng này.">
+<link rel="canonical" href="https://laptopnotesvn.github.io/bai-viet/bao-mat-laptop-dev-tpm-van-tay/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<!--seo-->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Laptop Lập Trình">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Bảo mật laptop dev - TPM, vân tay, mã hóa ổ và những thiết lập nên bật">
+<meta property="og:description" content="Giải thích TPM, Windows Hello vân tay, mã hóa ổ đĩa, smart card cho laptop dev: bảo vệ mã nguồn, khóa SSH và tài khoản, kèm máy đang bán có tính năng này.">
+<meta property="og:url" content="https://laptopnotesvn.github.io/bai-viet/bao-mat-laptop-dev-tpm-van-tay/">
+<meta property="og:image" content="https://laptopnotesvn.github.io/bai-viet/bao-mat-laptop-dev-tpm-van-tay/featured.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="750">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bảo mật laptop dev - TPM, vân tay, mã hóa ổ và những thiết lập nên bật">
+<meta name="twitter:description" content="Giải thích TPM, Windows Hello vân tay, mã hóa ổ đĩa, smart card cho laptop dev: bảo vệ mã nguồn, khóa SSH và tài khoản, kèm máy đang bán có tính năng này.">
+<meta name="twitter:image" content="https://laptopnotesvn.github.io/bai-viet/bao-mat-laptop-dev-tpm-van-tay/featured.webp">
+<meta property="article:published_time" content="2026-11-09T08:00:00+07:00">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Bảo mật laptop dev - TPM, vân tay, mã hóa ổ và những thiết lập nên bật","description":"Giải thích TPM, Windows Hello vân tay, mã hóa ổ đĩa, smart card cho laptop dev: bảo vệ mã nguồn, khóa SSH và tài khoản, kèm máy đang bán có tính năng này.","inLanguage":"vi-VN","url":"https://laptopnotesvn.github.io/bai-viet/bao-mat-laptop-dev-tpm-van-tay/","mainEntityOfPage":{"@type":"WebPage","@id":"https://laptopnotesvn.github.io/bai-viet/bao-mat-laptop-dev-tpm-van-tay/"},"author":{"@type":"Organization","name":"Laptop Lập Trình","url":"https://laptopnotesvn.github.io/"},"publisher":{"@type":"Organization","name":"Laptop Lập Trình","url":"https://laptopnotesvn.github.io/"},"datePublished":"2026-11-09T08:00:00+07:00","dateModified":"2026-11-09T08:00:00+07:00","image":["https://laptopnotesvn.github.io/bai-viet/bao-mat-laptop-dev-tpm-van-tay/featured.webp"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://laptopnotesvn.github.io/"},{"@type":"ListItem","position":2,"name":"Bài viết","item":"https://laptopnotesvn.github.io/#bai-viet"},{"@type":"ListItem","position":3,"name":"Bảo mật laptop dev - TPM, vân tay, mã hóa ổ và những thiết lập nên bật","item":"https://laptopnotesvn.github.io/bai-viet/bao-mat-laptop-dev-tpm-van-tay/"}]}</script>
+<!--/seo-->
+</head>
+<body class="page-post">
+<a class="skip" href="#main">Bỏ qua đến nội dung</a>
+<header class="site-hd">
+<div class="wrap hd-row">
+<a class="logo" href="../../"><span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 6 2 12 8 18"></polyline><polyline points="16 6 22 12 16 18"></polyline></svg></span><span class="hd logo-text">Laptop Lập Trình</span></a>
+<nav class="navlinks" aria-label="Điều hướng chính">
+<a href="../../#nhu-cau">Theo nhu cầu</a>
+<a href="../../#dong-may">Dòng máy</a>
+<a href="../../#bai-viet">Bài viết</a>
+</nav>
+<a class="btn btn-white" href="https://hungphatlaptop.com/">Hưng Phát<span class="hide-sm">&nbsp;Laptop</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
+</header>
+<main id="main">
+<article>
+<h1>Bảo mật laptop dev - TPM, vân tay, mã hóa ổ và những thiết lập nên bật</h1>
+<!--feat--><figure class="feat"><img src="featured.webp" width="1200" height="750" alt="Ảnh đại diện bài viết: Bảo mật laptop dev" fetchpriority="high"></figure><!--/feat-->
+<p>Máy của dev chứa nhiều thứ nhạy cảm hơn người ta tưởng: mã nguồn công ty, khóa SSH, token truy cập đám mây, tệp cấu hình có mật khẩu cơ sở dữ liệu. Mất máy, máy bị truy cập trái phép hay đơn giản là bỏ quên ở quán cà phê đều có thể gây thiệt hại lớn. Một vài thiết lập bảo mật cơ bản, nếu bật từ đầu, giảm đáng kể rủi ro mà không làm chậm công việc.</p>
+<p>Bài này giải thích các tính năng bảo mật phần cứng thường thấy, thiết lập nên bật và máy đang bán có những tính năng này. Đây là hướng dẫn chung, quy định bảo mật của công ty bạn là ưu tiên nếu có.</p>
+<!--toc--><nav class="toc" aria-label="Mục lục"><details open><summary>Mục lục</summary><ol><li><a href="#tpm-van-tay-va-cac-tinh-nang-phan-cung">TPM, vân tay và các tính năng phần cứng</a></li><li><a href="#thiet-lap-nen-bat">Thiết lập nên bật</a></li><li><a href="#bao-mat-khi-di-lai">Bảo mật khi đi lại</a></li><li><a href="#nhung-sai-lam-hay-gap">Những sai lầm hay gặp</a></li><li><a href="#tom-gon-trong-mot-bang">Tóm gọn trong một bảng</a></li><li><a href="#doi-chieu-voi-may-con-hang">Đối chiếu với máy còn hàng</a></li></ol></details></nav><!--/toc-->
+<h2 id="tpm-van-tay-va-cac-tinh-nang-phan-cung">TPM, vân tay và các tính năng phần cứng</h2>
+<p>TPM là chip bảo mật gắn trong máy, lưu khóa mã hóa ở nơi phần mềm khó đọc trộm. Nó giúp mã hóa ổ đĩa an toàn hơn và là yêu cầu của Windows 11. TPM có hai dạng: TPM rời (dTPM) là chip riêng và TPM firmware tích hợp trong chip, cả hai đều đạt mục đích phổ thông, dạng rời thường được xem là mạnh hơn.</p>
+<p>Cảm biến vân tay cho phép đăng nhập nhanh qua Windows Hello. Tiện lợi khi bạn khóa và mở máy nhiều lần mỗi ngày, vì không phải gõ mật khẩu dài. Nó cũng giảm nguy cơ lộ mật khẩu khi có người nhìn sau lưng.</p>
+<p>Smart card là thẻ chứa chứng chỉ, dùng trong môi trường doanh nghiệp đòi hỏi xác thực mạnh. Ổ SSD tự mã hóa là ổ có mã hóa phần cứng sẵn, hoạt động cùng TPM để bảo vệ dữ liệu khi ổ bị tháo ra. Webcam có nắp che và công tắc tắt micro là các chi tiết nhỏ nhưng thiết thực.</p>
+<h2 id="thiet-lap-nen-bat">Thiết lập nên bật</h2>
+<p>Thứ nhất là mã hóa toàn bộ ổ đĩa. Trên Windows, đó là BitLocker; trên Linux là LUKS. Nếu máy mất, dữ liệu trong ổ không đọc được nếu thiếu khóa. Hãy lưu khóa khôi phục ở nơi an toàn, không để cùng máy.</p>
+<p>Thứ hai là mật khẩu mạnh cùng khóa màn hình tự động khi rời máy. Thói quen nhấn phím tắt khóa màn hình mỗi khi đứng dậy là biện pháp rẻ nhất mà hiệu quả.</p>
+<p>Thứ ba là bảo vệ khóa SSH. Đặt cụm mật khẩu cho khóa, và nếu có thể dùng khóa phần cứng hoặc kho lưu bí mật của hệ điều hành thay vì để tệp khóa trần. Đừng đưa khóa vào kho Git công khai.</p>
+<p>Thứ tư là cập nhật hệ điều hành và firmware thường xuyên, vì nhiều lỗ hổng được vá qua các bản này. Thứ năm là xác thực hai lớp cho tài khoản Git, đám mây và email.</p>
+<h2 id="bao-mat-khi-di-lai">Bảo mật khi đi lại</h2>
+<p>Ở nơi công cộng, hãy dùng màn hình lọc nhìn trộm nếu hay xử lý nội dung nhạy cảm, và tránh dùng Wi-Fi lạ cho việc quan trọng. Nếu buộc phải dùng, hãy kết nối qua VPN. Đừng để máy mở và rời đi, kể cả một phút.</p>
+<p>Bật tính năng định vị và xóa máy từ xa nếu hệ điều hành hay công cụ quản trị của công ty hỗ trợ. Đó là lớp bảo vệ cuối cùng khi máy mất. Với dev làm việc từ xa, nội dung này đi cùng bài <a href="../laptop-cho-dev-freelance-lam-tu-xa/">laptop cho dev freelance làm từ xa</a>.</p>
+<h2 id="nhung-sai-lam-hay-gap">Những sai lầm hay gặp</h2>
+<p>Sai lầm phổ biến nhất là bật mã hóa ổ đĩa nhưng để khóa khôi phục trên chính máy đó, hoặc quên lưu hẳn. Khi máy hỏng bo mạch, dữ liệu coi như mất. Hãy lưu khóa ở hai nơi tách biệt máy, ví dụ trình quản lý mật khẩu và một bản giấy cất cẩn thận.</p>
+<p>Sai lầm thứ hai là dùng chung một mật khẩu cho nhiều dịch vụ, hoặc lưu token trong tệp văn bản ngay trong thư mục dự án. Hãy dùng trình quản lý mật khẩu, tệp môi trường được loại khỏi Git, và xoay khóa định kỳ. Sai lầm thứ ba là bỏ qua bản cập nhật firmware vì sợ phiền, trong khi đó là nơi hãng vá nhiều lỗ hổng cấp thấp.</p>
+<h2 id="tom-gon-trong-mot-bang">Tóm gọn trong một bảng</h2>
+<!--fig--><figure><img src="hinh-2.webp" width="1200" height="697" alt="Bảng tóm tắt các cấu hình Bảo mật laptop dev đang bán, gồm Tác dụng, Việc nên làm" loading="lazy" decoding="async"><figcaption>Các cấu hình Bảo mật laptop dev đang bán, tóm tắt từ bảng trong bài.</figcaption></figure><!--/fig-->
+<div class="tbl"><table>
+<thead><tr><th>Tính năng</th><th>Tác dụng</th><th>Việc nên làm</th></tr></thead>
+<tbody>
+<tr><td>TPM</td><td>Giữ khóa mã hóa an toàn</td><td>Bật cùng mã hóa ổ đĩa</td></tr>
+<tr><td>Vân tay</td><td>Đăng nhập nhanh, tránh lộ mật khẩu</td><td>Cài đặt qua Windows Hello</td></tr>
+<tr><td>Mã hóa ổ đĩa</td><td>Bảo vệ dữ liệu khi mất máy</td><td>Lưu khóa khôi phục riêng</td></tr>
+<tr><td>Smart card</td><td>Xác thực mạnh cho doanh nghiệp</td><td>Dùng nếu công ty yêu cầu</td></tr>
+<tr><td>Khóa SSH có cụm mật khẩu</td><td>Giảm rủi ro lộ khóa</td><td>Không để khóa trần trong kho mã</td></tr>
+</tbody>
+</table></div>
+<h2 id="doi-chieu-voi-may-con-hang">Đối chiếu với máy còn hàng</h2>
+<p><a href="https://hungphatlaptop.com/lenovo-thinkpad-t14-gen-6-2025/"><strong>Lenovo ThinkPad T14 Gen 6 (2025)</strong></a> có cảm biến vân tay, hỗ trợ Windows Hello và dTPM 2.0. Máy nặng 1,53 kg, có bản Ultra 5 235U 16GB hoặc bản Ultra 7 258V 32GB. Đây là cấu hình đủ cho đa số dev doanh nghiệp.</p>
+<p><a href="https://hungphatlaptop.com/hp-probook-4-g2i-14-ai-2026/"><strong>HP ProBook 4 G2i 14 AI (2026)</strong></a> có TPM 2.0, vân tay và bàn phím chống tràn, RAM 16GB DDR5 5600, hai cổng USB-C 20Gbps, hai USB-A, HDMI 2.1. Một lựa chọn thực tế cho môi trường văn phòng yêu cầu bảo mật cơ bản.</p>
+<p><a href="https://hungphatlaptop.com/dell-pro-max-14-mc14250-mobile-workstation-2025/"><strong>DELL Pro Max 14 MC14250 - Mobile Workstation (2025)</strong></a> có TPM, SSD tự mã hóa, hai cổng Thunderbolt 4. Dòng Pro Max 16 MC16250 còn có smart card, TPM 2.0, hợp người cần xác thực mạnh trong môi trường doanh nghiệp.</p>
+<p>Với người mới tìm hiểu máy doanh nghiệp, bài <a href="../dell-pro-14-2025-lap-trinh/">Dell Pro 14 cho lập trình</a> cho thấy một cấu hình phổ thông có TPM và vân tay tùy chọn.</p>
+<p class="gia">Đăng ngày 09/11/2026</p>
+</article>
+</main>
+<footer class="site-ft">
+<div class="wrap foot">
+<div class="foot-l">
+<span class="hd foot-brand">Laptop Lập Trình</span>
+<span>Ghi chú chọn máy cho người viết code. Máy được giới thiệu đang bán tại Hưng Phát Laptop, TP.HCM.</span>
+</div>
+<nav class="foot-nav" aria-label="Liên kết cuối trang">
+<a href="../../#nhu-cau">Theo nhu cầu</a>
+<a href="../../#dong-may">Dòng máy</a>
+<a href="../../#bai-viet">Bài viết</a>
+<a href="https://hungphatlaptop.com/">Hưng Phát Laptop</a>
+</nav>
+</div>
+</footer>
+</body>
+</html>

@@ -1,4 +1,76 @@
 {
+  "ban-phim-laptop-go-code-ca-ngay": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Bàn phím laptop gõ code cả ngày",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Bàn phím laptop gõ code cả ngày đang bán, gồm Nên nhìn, Vì sao quan trọng",
+        "caption": "Các cấu hình Bàn phím laptop gõ code cả ngày đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 4,
+        "w": 1200,
+        "h": 650
+      }
+    ]
+  },
+  "bao-mat-laptop-dev-tpm-van-tay": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Bảo mật laptop dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Bảo mật laptop dev đang bán, gồm Tác dụng, Việc nên làm",
+        "caption": "Các cấu hình Bảo mật laptop dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 5,
+        "w": 1200,
+        "h": 697
+      }
+    ]
+  },
+  "cong-thunderbolt-usb4-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Cổng Thunderbolt và USB4 cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Cổng Thunderbolt và USB4 cho dev đang bán, gồm Băng thông lý thuyết, Nối màn ngoài, Hợp với",
+        "caption": "Các cấu hình Cổng Thunderbolt và USB4 cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 4,
+        "w": 1200,
+        "h": 721
+      }
+    ]
+  },
+  "cpu-u-h-hx-nao-hop-build-code": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: CPU hậu tố U, H, HX khác nhau gì",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình CPU hậu tố U, H, HX khác nhau gì đang bán, gồm Điện năng, Ưu điểm, Hạn chế, Hợp với",
+        "caption": "Các cấu hình CPU hậu tố U, H, HX khác nhau gì đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 660
+      }
+    ]
+  },
   "dell-pro-14-2025-lap-trinh": {
     "featured": {
       "file": "featured.webp",
@@ -30,6 +102,24 @@
         "after_h2": 3,
         "w": 1200,
         "h": 420
+      }
+    ]
+  },
+  "dell-pro-14-vs-thinkpad-t14-gen-6-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Dell Pro 14 hay ThinkPad T14 Gen 6 cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro 14 hay ThinkPad T14 Gen 6 cho dev đang bán, gồm CPU, RAM, SSD, Màn hình",
+        "caption": "Các cấu hình Dell Pro 14 hay ThinkPad T14 Gen 6 cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 787
       }
     ]
   },
@@ -98,6 +188,24 @@
         "after_h2": 3,
         "w": 1200,
         "h": 627
+      }
+    ]
+  },
+  "dell-pro-max-14-vs-pro-max-14-premium-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Dell Pro Max 14 hay Pro Max 14 Premium cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro Max 14 hay Pro Max 14 Premium cho dev đang bán, gồm CPU, RAM, SSD, Card đồ họa, Màn hình",
+        "caption": "Các cấu hình Dell Pro Max 14 hay Pro Max 14 Premium cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 815
       }
     ]
   },
@@ -203,6 +311,42 @@
       }
     ]
   },
+  "dell-pro-max-16-premium-vs-16-plus-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Dell Pro Max 16 Premium hay 16 Plus cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro Max 16 Premium hay 16 Plus cho dev đang bán, gồm CPU, RAM, SSD, Card đồ họa, Màn hình",
+        "caption": "Các cấu hình Dell Pro Max 16 Premium hay 16 Plus cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 1097
+      }
+    ]
+  },
+  "dell-pro-max-16-vs-pro-max-16-plus-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Dell Pro Max 16 hay Pro Max 16 Plus cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell Pro Max 16 hay Pro Max 16 Plus cho dev đang bán, gồm CPU, RAM, SSD, Card đồ họa",
+        "caption": "Các cấu hình Dell Pro Max 16 hay Pro Max 16 Plus cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 772
+      }
+    ]
+  },
   "dell-pro-max-18-plus-lap-trinh": {
     "featured": {
       "file": "featured.webp",
@@ -271,6 +415,42 @@
       }
     ]
   },
+  "dell-xps-13-vs-dell-pro-14-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Dell XPS 13 hay Dell Pro 14 cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell XPS 13 hay Dell Pro 14 cho dev đang bán, gồm CPU, RAM, SSD, Màn hình",
+        "caption": "Các cấu hình Dell XPS 13 hay Dell Pro 14 cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 754
+      }
+    ]
+  },
+  "dell-xps-13-vs-xps-16-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Dell XPS 13 hay XPS 16 cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell XPS 13 hay XPS 16 cho dev đang bán, gồm CPU, RAM, SSD, Màn hình",
+        "caption": "Các cấu hình Dell XPS 13 hay XPS 16 cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 608
+      }
+    ]
+  },
   "dell-xps-16-2026-lap-trinh": {
     "featured": {
       "file": "featured.webp",
@@ -302,6 +482,76 @@
         "after_h2": 3,
         "w": 1200,
         "h": 387
+      }
+    ]
+  },
+  "dell-xps-16-vs-thinkpad-p1-gen-8-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Dell XPS 16 hay ThinkPad P1 Gen 8 cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Dell XPS 16 hay ThinkPad P1 Gen 8 cho dev đang bán, gồm CPU, RAM, SSD, Card đồ họa, Màn hình",
+        "caption": "Các cấu hình Dell XPS 16 hay ThinkPad P1 Gen 8 cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 759
+      }
+    ]
+  },
+  "elitebook-8-g2i-vs-probook-4-g2i-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: EliteBook 8 G2i hay ProBook 4 G2i cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình EliteBook 8 G2i hay ProBook 4 G2i cho dev đang bán, gồm CPU, RAM, SSD, Màn hình, Hệ điều hành",
+        "caption": "Các cấu hình EliteBook 8 G2i hay ProBook 4 G2i cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 632
+      }
+    ]
+  },
+  "gpu-roi-co-can-cho-lap-trinh": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết về GPU rời có cần không cho lập trình",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-1.webp",
+        "alt": "GPU rời có cần không trong ảnh giới thiệu sản phẩm",
+        "caption": "GPU rời có cần không trong ảnh giới thiệu sản phẩm.",
+        "after_h2": 1,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-3.webp",
+        "alt": "Góc nhìn khác của GPU rời có cần không trong ảnh giới thiệu",
+        "caption": "Một ảnh giới thiệu khác của GPU rời có cần không.",
+        "after_h2": 2,
+        "w": 1000,
+        "h": 625
+      },
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình GPU rời có cần không đang bán, gồm Cần card rời?, VRAM gợi ý, Ghi chú",
+        "caption": "Các cấu hình GPU rời có cần không đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 730
       }
     ]
   },
@@ -407,6 +657,42 @@
       }
     ]
   },
+  "ideapad-slim-3-vs-probook-4-g2i-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: IdeaPad Slim 3 hay HP ProBook 4 G2i cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình IdeaPad Slim 3 hay HP ProBook 4 G2i cho dev đang bán, gồm CPU, RAM, SSD, Màn hình, Hệ điều hành",
+        "caption": "Các cấu hình IdeaPad Slim 3 hay HP ProBook 4 G2i cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 632
+      }
+    ]
+  },
+  "intel-core-ultra-va-ryzen-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Intel Core Ultra và Ryzen cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Intel Core Ultra và Ryzen cho dev đang bán, gồm Nên so, Ghi chú",
+        "caption": "Các cấu hình Intel Core Ultra và Ryzen cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 4,
+        "w": 1200,
+        "h": 650
+      }
+    ]
+  },
   "lap-trinh-vien-can-bao-nhieu-ram": {
     "featured": {
       "file": "featured.webp",
@@ -422,6 +708,438 @@
         "after_h2": 6,
         "w": 1200,
         "h": 1074
+      }
+    ]
+  },
+  "laptop-14-inch-hay-16-inch-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop 14 inch hay 16 inch cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop 14 inch hay 16 inch cho dev đang bán, gồm 14 inch, 16 inch",
+        "caption": "Các cấu hình Laptop 14 inch hay 16 inch cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 4,
+        "w": 1200,
+        "h": 650
+      }
+    ]
+  },
+  "laptop-chay-docker-kubernetes-tai-may": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop chạy Docker và Kubernetes tại máy",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop chạy Docker và Kubernetes tại máy đang bán, gồm CPU, RAM, SSD, Phù hợp với",
+        "caption": "Các cấu hình Laptop chạy Docker và Kubernetes tại máy đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 627
+      }
+    ]
+  },
+  "laptop-chay-llm-cuc-bo-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop chạy LLM cục bộ cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop chạy LLM cục bộ cho dev đang bán, gồm Đồ họa, RAM, SSD, Có thể chạy",
+        "caption": "Các cấu hình Laptop chạy LLM cục bộ cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 627
+      }
+    ]
+  },
+  "laptop-chay-wsl2-va-may-ao": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop chạy WSL2 và máy ảo",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop chạy WSL2 và máy ảo đang bán, gồm Hợp với, RAM máy, Chia cho máy ảo hoặc WSL2, CPU, SSD",
+        "caption": "Các cấu hình Laptop chạy WSL2 và máy ảo đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 608
+      }
+    ]
+  },
+  "laptop-cho-android-studio-va-gia-lap": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop cho Android Studio và giả lập",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop cho Android Studio và giả lập đang bán, gồm CPU, RAM, SSD, Ghi chú",
+        "caption": "Các cấu hình Laptop cho Android Studio và giả lập đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 627
+      }
+    ]
+  },
+  "laptop-cho-data-science-python": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop cho data science và Python",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop cho data science và Python đang bán, gồm CPU, RAM, Đồ họa, SSD",
+        "caption": "Các cấu hình Laptop cho data science và Python đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 528
+      }
+    ]
+  },
+  "laptop-cho-dev-freelance-lam-tu-xa": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop cho dev freelance và làm việc từ xa",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop cho dev freelance và làm việc từ xa đang bán, gồm Hợp với, CPU, RAM, SSD, Điểm cần nhìn",
+        "caption": "Các cấu hình Laptop cho dev freelance và làm việc từ xa đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 660
+      }
+    ]
+  },
+  "laptop-cho-devops-va-cloud": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop cho DevOps và cloud",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop cho DevOps và cloud đang bán, gồm Hợp với, CPU, RAM, SSD, Mạng",
+        "caption": "Các cấu hình Laptop cho DevOps và cloud đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 575
+      }
+    ]
+  },
+  "laptop-cho-dotnet-visual-studio": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop .NET và Visual Studio",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop .NET và Visual Studio đang bán, gồm Hợp với, CPU, RAM, SSD",
+        "caption": "Các cấu hình Laptop .NET và Visual Studio đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 575
+      }
+    ]
+  },
+  "laptop-cho-flutter-react-native": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop cho Flutter và React Native",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop cho Flutter và React Native đang bán, gồm Hợp với, CPU, RAM, SSD",
+        "caption": "Các cấu hình Laptop cho Flutter và React Native đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 627
+      }
+    ]
+  },
+  "laptop-cho-java-spring-intellij": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop Java Spring và IntelliJ",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop Java Spring và IntelliJ đang bán, gồm Hợp với, CPU, RAM, SSD",
+        "caption": "Các cấu hình Laptop Java Spring và IntelliJ đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 542
+      }
+    ]
+  },
+  "laptop-cho-lap-trinh-game-unity-unreal": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop game Unity và Unreal",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop game Unity và Unreal đang bán, gồm Hợp với, CPU, RAM, GPU, SSD",
+        "caption": "Các cấu hình Laptop game Unity và Unreal đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 608
+      }
+    ]
+  },
+  "laptop-cho-lap-trinh-nhung-iot": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop nhúng và IoT",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop nhúng và IoT đang bán, gồm Hợp với, CPU, RAM, SSD, Cổng",
+        "caption": "Các cấu hình Laptop nhúng và IoT đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 608
+      }
+    ]
+  },
+  "laptop-cho-lap-trinh-web-fullstack": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop web fullstack",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop web fullstack đang bán, gồm CPU, RAM, SSD, Phù hợp với",
+        "caption": "Các cấu hình Laptop web fullstack đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 575
+      }
+    ]
+  },
+  "laptop-cho-nguoi-moi-hoc-code": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop cho người mới học code",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop cho người mới học code đang bán, gồm Hợp với, CPU, RAM, SSD",
+        "caption": "Các cấu hình Laptop cho người mới học code đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 575
+      }
+    ]
+  },
+  "laptop-cho-sinh-vien-cong-nghe-thong-tin": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Laptop cho sinh viên công nghệ thông tin",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Laptop cho sinh viên công nghệ thông tin đang bán, gồm Hợp với, CPU, RAM, SSD, Trọng lượng gợi ý",
+        "caption": "Các cấu hình Laptop cho sinh viên công nghệ thông tin đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 726
+      }
+    ]
+  },
+  "man-hinh-16-10-va-do-phan-giai-khi-code": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Màn hình tỉ lệ 16 trên 10 và độ phân giải khi code",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Màn hình tỉ lệ 16 trên 10 và độ phân giải khi code đang bán, gồm Hợp với, Ưu điểm, Cần chú ý",
+        "caption": "Các cấu hình Màn hình tỉ lệ 16 trên 10 và độ phân giải khi code đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 5,
+        "w": 1200,
+        "h": 721
+      }
+    ]
+  },
+  "may-tram-di-dong-co-can-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Máy trạm di động có cần cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Máy trạm di động có cần cho dev đang bán, gồm Cần máy trạm?, Lý do",
+        "caption": "Các cấu hình Máy trạm di động có cần cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 4,
+        "w": 1200,
+        "h": 782
+      }
+    ]
+  },
+  "nang-cap-ram-ssd-sau-khi-mua-laptop-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Nâng cấp RAM và SSD sau khi mua laptop dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Nâng cấp RAM và SSD sau khi mua laptop dev đang bán, gồm Nâng được khi, Không nâng được khi, Cần kiểm tra",
+        "caption": "Các cấu hình Nâng cấp RAM và SSD sau khi mua laptop dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 5,
+        "w": 1200,
+        "h": 721
+      }
+    ]
+  },
+  "npu-tren-laptop-dev-dung-duoc-gi": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: NPU trên laptop dev dùng được gì",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình NPU trên laptop dev dùng được gì đang bán, gồm NPU, GPU rời, Ghi chú",
+        "caption": "Các cấu hình NPU trên laptop dev dùng được gì đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 815
+      }
+    ]
+  },
+  "pin-va-sac-laptop-dev-di-lam": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Pin và sạc laptop dev đi làm",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Pin và sạc laptop dev đi làm đang bán, gồm Ảnh hưởng, Việc nên làm",
+        "caption": "Các cấu hình Pin và sạc laptop dev đi làm đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 4,
+        "w": 1200,
+        "h": 664
+      }
+    ]
+  },
+  "ram-han-hay-ram-roi-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: RAM hàn hay RAM rời cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình RAM hàn hay RAM rời cho dev đang bán, gồm Nâng cấp, Độ gọn, Điện năng, Hợp với",
+        "caption": "Các cấu hình RAM hàn hay RAM rời cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 575
+      }
+    ]
+  },
+  "ssd-bao-nhieu-gb-du-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: SSD bao nhiêu GB là đủ cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình SSD bao nhiêu GB là đủ cho dev đang bán, gồm Hợp với, Cần chú ý",
+        "caption": "Các cấu hình SSD bao nhiêu GB là đủ cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 3,
+        "w": 1200,
+        "h": 754
+      }
+    ]
+  },
+  "tan-nhiet-khi-build-lau-tren-laptop": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: Tản nhiệt khi build lâu trên laptop",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình Tản nhiệt khi build lâu trên laptop đang bán, gồm Tác động, Cách xử lý",
+        "caption": "Các cấu hình Tản nhiệt khi build lâu trên laptop đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 4,
+        "w": 1200,
+        "h": 650
       }
     ]
   },
@@ -493,6 +1211,42 @@
       }
     ]
   },
+  "thinkpad-e14-gen-8-vs-ideapad-slim-3-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: ThinkPad E14 Gen 8 hay IdeaPad Slim 3 cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình ThinkPad E14 Gen 8 hay IdeaPad Slim 3 cho dev đang bán, gồm CPU, RAM, SSD, Màn hình, Hệ điều hành",
+        "caption": "Các cấu hình ThinkPad E14 Gen 8 hay IdeaPad Slim 3 cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 759
+      }
+    ]
+  },
+  "thinkpad-e14-gen-8-vs-thinkbook-14-g8-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: ThinkPad E14 Gen 8 hay ThinkBook 14 G8 cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình ThinkPad E14 Gen 8 hay ThinkBook 14 G8 cho dev đang bán, gồm CPU, RAM, SSD, Hệ điều hành, Màn hình",
+        "caption": "Các cấu hình ThinkPad E14 Gen 8 hay ThinkBook 14 G8 cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 759
+      }
+    ]
+  },
   "thinkpad-p1-gen-8-lap-trinh": {
     "featured": {
       "file": "featured.webp",
@@ -527,6 +1281,24 @@
       }
     ]
   },
+  "thinkpad-p1-gen-8-vs-pro-max-16-premium-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: ThinkPad P1 Gen 8 hay Dell Pro Max 16 Premium cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình ThinkPad P1 Gen 8 hay Dell Pro Max 16 Premium cho dev đang bán, gồm CPU, RAM, SSD, Card đồ họa, Màn hình",
+        "caption": "Các cấu hình ThinkPad P1 Gen 8 hay Dell Pro Max 16 Premium cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 909
+      }
+    ]
+  },
   "thinkpad-p16-gen-3-lap-trinh": {
     "featured": {
       "file": "featured.webp",
@@ -558,6 +1330,42 @@
         "after_h2": 3,
         "w": 1200,
         "h": 547
+      }
+    ]
+  },
+  "thinkpad-p16-gen-3-vs-pro-max-16-plus-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: ThinkPad P16 Gen 3 hay Dell Pro Max 16 Plus cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình ThinkPad P16 Gen 3 hay Dell Pro Max 16 Plus cho dev đang bán, gồm CPU, RAM, SSD, Card đồ họa, Màn hình",
+        "caption": "Các cấu hình ThinkPad P16 Gen 3 hay Dell Pro Max 16 Plus cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 1008
+      }
+    ]
+  },
+  "thinkpad-p16-gen-3-vs-pro-max-18-plus-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: ThinkPad P16 Gen 3 hay Dell Pro Max 18 Plus cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình ThinkPad P16 Gen 3 hay Dell Pro Max 18 Plus cho dev đang bán, gồm CPU, RAM, SSD, Card đồ họa, Màn hình",
+        "caption": "Các cấu hình ThinkPad P16 Gen 3 hay Dell Pro Max 18 Plus cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 759
       }
     ]
   },
@@ -629,6 +1437,42 @@
       }
     ]
   },
+  "thinkpad-t14-gen-7-vs-elitebook-8-g2i-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: ThinkPad T14 Gen 7 hay EliteBook 8 G2i",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình ThinkPad T14 Gen 7 hay EliteBook 8 G2i đang bán, gồm CPU, RAM, SSD, Màn hình",
+        "caption": "Các cấu hình ThinkPad T14 Gen 7 hay EliteBook 8 G2i đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 726
+      }
+    ]
+  },
+  "thinkpad-t14-gen-7-vs-gen-6-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: ThinkPad T14 Gen 7 hay Gen 6",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình ThinkPad T14 Gen 7 hay Gen 6 đang bán, gồm Bản, CPU, RAM, SSD, Đồ hoạ, Màn hình",
+        "caption": "Các cấu hình ThinkPad T14 Gen 7 hay Gen 6 đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 829
+      }
+    ]
+  },
   "thinkpad-t1g-gen-8-2026-lap-trinh": {
     "featured": {
       "file": "featured.webp",
@@ -663,6 +1507,42 @@
       }
     ]
   },
+  "thinkpad-t1g-gen-8-vs-dell-pro-max-14-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: ThinkPad T1G Gen 8 hay Dell Pro Max 14 cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình ThinkPad T1G Gen 8 hay Dell Pro Max 14 cho dev đang bán, gồm CPU, RAM, SSD, Card đồ họa, Màn hình",
+        "caption": "Các cấu hình ThinkPad T1G Gen 8 hay Dell Pro Max 14 cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 853
+      }
+    ]
+  },
+  "thinkpad-t1g-gen-8-vs-p1-gen-8-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: ThinkPad T1G Gen 8 hay P1 Gen 8 cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình ThinkPad T1G Gen 8 hay P1 Gen 8 cho dev đang bán, gồm CPU, RAM, SSD, Card đồ họa, Màn hình",
+        "caption": "Các cấu hình ThinkPad T1G Gen 8 hay P1 Gen 8 cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 820
+      }
+    ]
+  },
   "thinkpad-x1-carbon-gen-14-lap-trinh": {
     "featured": {
       "file": "featured.webp",
@@ -694,6 +1574,42 @@
         "after_h2": 3,
         "w": 1200,
         "h": 693
+      }
+    ]
+  },
+  "x1-carbon-gen-14-vs-thinkpad-t14-gen-7-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: X1 Carbon Gen 14 hay ThinkPad T14 Gen 7 cho dev",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình X1 Carbon Gen 14 hay ThinkPad T14 Gen 7 cho dev đang bán, gồm X1 Carbon Gen 14, T14 Gen 7",
+        "caption": "Các cấu hình X1 Carbon Gen 14 hay ThinkPad T14 Gen 7 cho dev đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 711
+      }
+    ]
+  },
+  "x1-carbon-gen-14-vs-xps-13-cho-dev": {
+    "featured": {
+      "file": "featured.webp",
+      "alt": "Ảnh đại diện bài viết: X1 Carbon Gen 14 hay XPS 13 cho dev hay di chuyển",
+      "w": 1200,
+      "h": 750
+    },
+    "figures": [
+      {
+        "file": "hinh-2.webp",
+        "alt": "Bảng tóm tắt các cấu hình X1 Carbon Gen 14 hay XPS 13 cho dev hay di chuyển đang bán, gồm CPU, RAM, SSD, Màn hình",
+        "caption": "Các cấu hình X1 Carbon Gen 14 hay XPS 13 cho dev hay di chuyển đang bán, tóm tắt từ bảng trong bài.",
+        "after_h2": 2,
+        "w": 1200,
+        "h": 909
       }
     ]
   }
